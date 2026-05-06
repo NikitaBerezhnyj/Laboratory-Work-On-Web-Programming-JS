@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="control">
+        <select id="sort">
+            <option value="name">Name</option>
+            <option value="weight">Weight</option>
+            <option value="height">Height</option>
+            <option value="life">Life span</option>
+        </select>
+
+        <select id="groupFilter">
+            <option value="">All groups</option>
+        </select>
+
+        <input type="number" id="weightMin" placeholder="Min weight">
+        <input type="number" id="weightMax" placeholder="Max weight">
+
+        <input type="text" id="search" placeholder="Search...">
+    </div>
+    <ul id="breeds" class="cards">
+        <!-- <li class="card"><img src="https://cdn2.thedogapi.com/images/HyWNfxc47.jpg">
+            <h2>French Bulldog</h2>
+            <p class="group">Non-Sporting</p>
+            <p class="group">Lapdog</p>
+            <p>Playful, Affectionate, Keen, Sociable, Lively, Alert, Easygoing, Patient, Athletic, Bright</p>
+            <p>Weight: <span>13 kg</span></p>
+        </li> -->
+    </ul>
+
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>

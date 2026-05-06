@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="panel left-panel">
+            <div class="card">
+                <h2>
+                    Курс валют на
+                    <span id="current-date"></span>
+                </h2>
+
+                <ul id="currency-list">
+                    <li>Завантаження...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel right-panel">
+            <div class="card">
+                <h2>Конвертер валют</h2>
+
+                <div class="converter-row">
+                    <input type="number" id="amount-foreign" placeholder="Сума">
+                    <select id="currency-foreign"></select>
+
+                    <span class="arrow">→</span>
+
+                    <input type="number" id="amount-uah" placeholder="Гривні" readonly>
+                </div>
+
+                <div class="converter-row">
+                    <input type="number" id="amount-uah-input" placeholder="Гривні">
+
+                    <span class="arrow">→</span>
+
+                    <select id="currency-uah"></select>
+                    <input type="number" id="amount-foreign-result" placeholder="Сума" readonly>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="card">
+                <h3 id="history-title">Курс валюти за тиждень</h3>
+                <div id="history-output">
+                    <p>Виберіть валюту зі списку зліва</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

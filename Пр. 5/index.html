@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Клімат-контроль</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <h2>Клімат-контроль</h2>
+
+        <div class="control">
+            <span class="label">Температура</span>
+            <div>
+                <button onclick="changeValue('temp', -1)">-</button>
+                <span id="temp" class="value">20</span>
+                <button onclick="changeValue('temp', 1)">+</button>
+            </div>
+        </div>
+
+        <div class="control">
+            <span class="label">Вентилятор</span>
+            <div>
+                <button onclick="changeValue('fan', -1)">-</button>
+                <span id="fan" class="value">1</span>
+                <button onclick="changeValue('fan', 1)">+</button>
+            </div>
+        </div>
+
+        <div class="control">
+            <span class="label">Вологість</span>
+            <div>
+                <button onclick="changeValue('humidity', -1)">-</button>
+                <span id="humidity" class="value">50</span>
+                <button onclick="changeValue('humidity', 1)">+</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
