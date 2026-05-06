@@ -2,11 +2,24 @@ const list = document.getElementById("todo-list");
 const itemCountSpan = document.getElementById("item-count");
 const uncheckedCountSpan = document.getElementById("unchecked-count");
 
-let todos = [
-  { id: 1, text: "Вивчити HTML", checked: true },
-  { id: 2, text: "Вивчити CSS", checked: true },
-  { id: 3, text: "Вивчити JavaScript", checked: false },
-];
+const STORAGE_KEY = "todos_data";
+
+let todos = loadFromLocalStorage();
+
+function loadFromLocalStorage() {
+  const data = localStorage.getItem(STORAGE_KEY);
+  return data
+    ? JSON.parse(data)
+    : [
+        { id: 1, text: "Вивчити HTML", checked: true },
+        { id: 2, text: "Вивчити CSS", checked: true },
+        { id: 3, text: "Вивчити JavaScript", checked: false },
+      ];
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+}
 
 function renderTodo(todo) {
   return `
@@ -37,6 +50,7 @@ function render() {
   const htmlRows = todos.map((todo) => renderTodo(todo));
   list.innerHTML = htmlRows.join("");
   updateCounter();
+  saveToLocalStorage();
 }
 
 function updateCounter() {
